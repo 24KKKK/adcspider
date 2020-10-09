@@ -7,11 +7,11 @@ class VipspiderSpider(scrapy.Spider):
     name = 'vipspider'
     allowed_domains = ['yglz.tousu.hebnews.cn/']
     start_urls = ['http://yglz.tousu.hebnews.cn/shss-1.html']
-    # custom_settings = {
-    #     'LOG_LEVEL': 'ERROR'
-    # }
+    custom_settings = {
+        'LOG_LEVEL': 'ERROR'
+    }
     pageNo = 1
-    pageCount = 20  # 一共要爬取得页数
+    pageCount = 5  # 一共要爬取得页数
 
     def parse(self, response):
         item = AdcspiderItem()
